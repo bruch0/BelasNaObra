@@ -11,18 +11,21 @@ function Header() {
 		<PageHeader>
 			<Container>
 				<QuickLinks>
-					<Link to='/sobre'>Sobre nós</Link>
-					<p onClick = {() => {
+					<a onClick={() => {
+						history.push('/sobre');
+						window.scrollTo(0, 0);
+					}}>Sobre nós</a>
+					<a tabIndex={0} onClick = {() => {
 						if (history.location.pathname !== '/') {
 							history.push('/')
 						}
 						else {
 							scrollTo({top: 0, left: 0, behavior: 'smooth'})
 						}
-					}}>Serviços</p>
+					}}>Serviços</a>
 					<Link to='/calculadora'>Calculadora</Link>
 				</QuickLinks>
-				<Contact onClick={() => {
+				<Contact tabIndex={0} onClick={() => {
 						if (history.location.pathname !== '/') {
 							history.push('/')
 						}
@@ -30,7 +33,7 @@ function Header() {
 					}}>
 					Contato
 				</Contact>
-				<Logo src={logo} onClick={() => {
+				<Logo tabIndex={0} src={logo} alt='Logo/suba para o topo da tela' onClick={() => {
 					if (history.location.pathname !== '/') {
 						history.push('/');
 					}
@@ -106,7 +109,7 @@ const QuickLinks = styled.div`
 	}
 `
 
-const Contact = styled.p`
+const Contact = styled.a`
 	position: absolute;
 	font-family: 'Spartan', sans-serif;
 	top: 20px;

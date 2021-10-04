@@ -91,7 +91,7 @@ function Card({icon, name, scroll, link}) {
 		return (
 			<Link to={link}>
 				<OptionCard onClick={() => scroll !== '' ? scroll.current.scrollIntoView({behavior: 'smooth'}) : ''}>
-					<Icon src={icon} />
+					<Icon src={icon} alt={`Vá até ${name}`} />
 					<CardName>
 						{name}
 					</CardName>
@@ -101,7 +101,7 @@ function Card({icon, name, scroll, link}) {
 	}
 	return (
 		<OptionCard onClick={() => scroll !== '' ? scroll.current.scrollIntoView({behavior: 'smooth'}) : ''}>
-			<Icon src={icon} />
+			<Icon src={icon} alt={`Vá até ${name}`} />
 			<CardName>
 				{name}
 			</CardName>
@@ -132,6 +132,10 @@ const OptionsContainer = styled.main`
 	display: grid;
     grid-template-columns: repeat(4, 1fr);
 	gap: 4%;
+
+	a {
+		height: calc(22vw - 36px);
+	}
 
 	@media (max-width: 600px) {
 		height: 180vw;

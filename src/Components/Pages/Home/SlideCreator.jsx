@@ -5,6 +5,8 @@ import cladding10 from '../../../assets/Cladding/cladding10.jpeg'
 import cladding16 from '../../../assets/Cladding/cladding16.jpeg'
 import cladding17 from '../../../assets/Cladding/cladding17.jpeg'
 import cladding18 from '../../../assets/Cladding/cladding18.jpeg'
+import cladding19 from '../../../assets/Cladding/cladding19.gif'
+import cladding20 from '../../../assets/Cladding/cladding20.jpeg'
 
 import eletric3 from '../../../assets/Eletric/eletric3.jpeg'
 import eletric4 from '../../../assets/Eletric/eletric4.jpeg'
@@ -19,8 +21,11 @@ import hidraulic3 from '../../../assets/Hidraulic/hidraulic3.jpeg'
 import hidraulic4 from '../../../assets/Hidraulic/hidraulic4.jpeg'
 import hidraulic5 from '../../../assets/Hidraulic/hidraulic5.jpeg'
 import hidraulic6 from '../../../assets/Hidraulic/hidraulic6.jpeg'
+import hidraulic7 from '../../../assets/Hidraulic/hidraulic7.jpeg'
+import hidraulic8 from '../../../assets/Hidraulic/hidraulic8.jpeg'
 import hidraulic9 from '../../../assets/Hidraulic/hidraulic9.jpeg'
 import hidraulic10 from '../../../assets/Hidraulic/hidraulic10.jpeg'
+import hidraulic11 from '../../../assets/Hidraulic/hidraulic11.gif'
 
 import lining2 from '../../../assets/Lining/lining2.jpeg'
 import lining3 from '../../../assets/Lining/lining3.jpeg'
@@ -48,7 +53,7 @@ const slidesPainting = () => {
 
 const slidesCladding = () => {
 	const slides = [
-		cladding2, cladding5, cladding9, cladding10, cladding16, cladding17, cladding18
+		cladding2, cladding5, cladding9, cladding10, cladding16, cladding17, cladding18, cladding19, cladding20
 	]
 	return slides
 }
@@ -62,7 +67,7 @@ const slidesEletric = () => {
 
 const slidesHidraulic = () => {
 	const slides = [
-		hidraulic2, hidraulic3, hidraulic4,	hidraulic5, hidraulic6, hidraulic9, hidraulic10,
+		hidraulic2, hidraulic3, hidraulic4,	hidraulic5, hidraulic6, hidraulic7, hidraulic8, hidraulic9, hidraulic10, hidraulic11
 	]
 	return slides
 }

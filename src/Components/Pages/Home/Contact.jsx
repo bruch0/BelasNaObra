@@ -9,7 +9,7 @@ function Contact() {
 		{name: 'WhatApp', icon: <AiOutlineWhatsApp />, ref: `https://wa.me/5511993100778?text=${text}`, colored: 1},
 		{name: 'Facebook', icon: <FiFacebook />, 	ref: 'https://www.facebook.com/belasnaobra'},
 		{name: 'Instagram', icon: <AiOutlineInstagram />, ref: 'https://www.instagram.com/belasnaobra/'},
-		{name: 'belasnaobra@gmail.com', icon: <FiMail />},
+		{name: 'belasnaobra@gmail.com', icon: <FiMail />, ref: 'https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=someone@gmail.com'},
 
 	]
 	
@@ -19,12 +19,12 @@ function Contact() {
 			Entre em contato
 		</Title>
 		<ContactSection>
-			<Map src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467689.79719810525!2d-46.875492079696244!3d-23.68216038794643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce448183a461d1%3A0x9ba94b08ff335bae!2zU8OjbyBQYXVsbywgU1A!5e0!3m2!1spt-BR!2sbr!4v1633095371936!5m2!1spt-BR!2sbr' allowFullScreen={true} loading='lazy'/>
+			<Map src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467689.79719810525!2d-46.875492079696244!3d-23.68216038794643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce448183a461d1%3A0x9ba94b08ff335bae!2zU8OjbyBQYXVsbywgU1A!5e0!3m2!1spt-BR!2sbr!4v1633095371936!5m2!1spt-BR!2sbr' allowFullScreen={true} loading='lazy' title='Localização'/>
 			<Contacts>
 				{contacts.map((contact, index) => {
 					return (
 						<Holder href={contact.ref} key={index} target='_blank' color={contact.colored}>
-							<Icon color={contact.colored}>
+							<Icon color={contact.colored} alt={contact.name}>
 								{contact.icon}
 							</Icon>
 							<span>{contact.name}</span>

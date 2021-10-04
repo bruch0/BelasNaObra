@@ -20,7 +20,7 @@ function Template({viewportWidth, logo, slides, name}) {
 			</Title>
 			<SlideshowContainer>
 			<Slide {...fadeProperties}>
-				{slides ? slides.map((slide, index) => <SlideImg slide={slide} key={index} />) : ''}
+				{slides ? slides.map((slide, index) => <SlideImg slide={slide} alt='foto' key={index} />) : ''}
 			</Slide>
 			</SlideshowContainer>
 		</TemplateSection>

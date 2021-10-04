@@ -12,7 +12,11 @@ function Calculator() {
 	const [cladding, setCladding] = useState({enabled: false, value: [], qty: [0, 0, 0, 0, 0, 0, 0, 0, 0], price: 0});
 	const [painting, setPainting] = useState({enabled: false, value: [], qty: [0, 0, 0, 0, 0, 0, 0, 0, 0], price: 0});
 	const [area, setArea] = useState('');
+
 	calculate(demolition, construction, hidraulics, eletric, cladding, painting, area);
+
+	const total = demolition.price + construction.price + eletric.price + hidraulics.price + cladding.price + painting.price;
+
 	const services = 
 	[
 		{name: 'Demolição', state: demolition, setState: setDemolition},
@@ -22,7 +26,8 @@ function Calculator() {
 		{name: 'Revestimento', state: cladding, setState: setCladding},
 		{name: 'Pintura', state: painting, setState: setPainting},
 
-	]
+	];
+
 	const rooms = 
 	[
 		'Quarto', 'Suíte', 'Sala', 'Cozinha', 'Área de serviço', 'Terraço', 'Corredor', 'Banheiro', 'Lavabo'
@@ -31,7 +36,7 @@ function Calculator() {
 	const handleServices = (index, state, setState, action) => {
 		if (action !== undefined) {
 			if (state.dropdown !== undefined) {
-				setState({enabled: action === 'uncheck' ? false : true, value: action === 'uncheck' ? 1 : 0, dropdown: false, price: 0})
+				setState({enabled: action === 'uncheck' ? false : true, value: action === 'uncheck' ? 0 : 1, dropdown: false, price: 0})
 			}
 			else if (state !== undefined) {
 				setState({enabled: action === 'uncheck' ? false : true, value: [], qty: [0, 0, 0, 0, 0, 0, 0, 0, 0], price: 0})
@@ -53,13 +58,26 @@ function Calculator() {
 	}
 
 	const testRegex = (key) => {
-		console.log((/^[0-9]+$/).test(key))
 		return (/^[0-9]+$/).test(key)
 	}
 
 	const handleInput = (keyboard) => {
-		
-		if (testRegex(keyboard.data) || keyboard.inputType === 'deleteContentBackward' || keyboard.inputType === 'deleteContentForward') {
+		if ((keyboard.target.value).toString().length > 11) {
+			return
+		}
+		else if (keyboard.target.value.indexOf('.') !== -1) {
+			let fixedValue = keyboard.target.value.split('.')[0] + keyboard.target.value.split('.')[1];
+			setArea(fixedValue)
+		}
+		else if (keyboard.target.value.indexOf('-') !== -1) {
+			let fixedValue = keyboard.target.value.split('-')[0] + keyboard.target.value.split('-')[1];
+			setArea(fixedValue)
+		}
+		else if (keyboard.target.value.indexOf('+') !== -1) {
+			let fixedValue = keyboard.target.value.split('+')[0] + keyboard.target.value.split('+')[1];
+			setArea(fixedValue)
+		}
+		else if (testRegex(keyboard.data) || keyboard.inputType === 'deleteContentBackward' || keyboard.inputType === 'deleteContentForward') {
 			setArea(keyboard.target.value)
 		}
 	}
@@ -75,7 +93,6 @@ function Calculator() {
 					placeholder='Insira a área total em m²'
 					value={area}
 					onChange={(change) => {
-						console.log(change)
 						handleInput(change.nativeEvent);
 					}}
 				/>
@@ -94,6 +111,13 @@ function Calculator() {
 					)
 				})}
 			</UserInputs>
+			<Total enabled={area !== '' && Number(area) !== 0 && total !== 0 ? 1 : 0}>
+				TOTAL
+				<UserAreaInput 
+					readOnly={true}
+					value={total < 1500 ? 'R$ 1500' : `R$ ${total}`}
+				/>
+			</Total>
 		</CalculatorSection>
 	)
 }
@@ -116,10 +140,6 @@ const Title = styled.div`
 	align-items: center;
 	margin-bottom: 50px;
 	border-radius: 15px 15px 0px 0px;
-
-	svg {
-		height: 30px;
-	}
 
 	@media (max-width: 450px) {
 		font-size: 30px;
@@ -160,6 +180,27 @@ const UserInputs = styled.div`
 	svg {
 		cursor: pointer;
 		margin-left: 0px;
+	}
+`
+
+const Total = styled.div`
+	width: 100%;
+	height: 60px;
+	font-size: 30px;
+	display: ${props => props.enabled ? 'flex' : 'none'};
+	justify-content: space-between;
+	align-items: center;
+	padding-left: calc(50% - 50px);
+	border-radius: 15px 15px 0px 0px;
+
+	svg {
+		height: 30px;
+	}
+
+	@media (max-width: 450px) {
+		font-size: 30px;
+		flex-direction: column;
+		align-items: flex-start;
 	}
 `
 

@@ -37,35 +37,35 @@ function calculate(demolition, construction, hidraulics, eletric, cladding, pain
 
 	const calculateDemolition = () => {
 		let aux = sumTotalRooms(demolition.qty) * demolitionValue;
-		newDemolitionPrice = aux === 0 ? 0 : `R$ ${aux}`
+		newDemolitionPrice = aux === 0 ? 0 :aux;
 	}
 
 	const calculateConstruction = () => {
 		if (construction.value.length === 9) {
-			newConstructionPrice = `R$ ${constructionValue * totalArea * 8}`;
+			newConstructionPrice = constructionValue * totalArea * 8;
 		}
 		else {
 			let aux = 0;
 			construction.value.forEach((element) => { 
 				aux += rooms[element].averageArea * construction.qty[element] * constructionValue
 			});
-			newConstructionPrice = aux === 0 ? 0 : `R$ ${aux}`;
+			newConstructionPrice = aux === 0 ? 0 : aux;
 		}
 	}
 
 	const calculateHidraulics = () => {
 		let aux = hidraulics.value * hidraulicsValue;
-		newHidraulicsPrice = aux === 0 ? 0 : `R$ ${aux}`
+		newHidraulicsPrice = aux === 0 ? 0 : aux
 	}
 
 	const calculateEletric = () => {
 		let aux = eletric.value * eletricValue;
-		newEletricPrice = aux === 0 ? 0 : `R$ ${aux}`
+		newEletricPrice = aux === 0 ? 0 : aux
 	}
 
 	const calculateCladding = () => {
 		if (cladding.value.length === 9) {
-			newCladdingPrice = `R$ ${claddingValue * totalArea * 4}`;
+			newCladdingPrice = claddingValue * totalArea * 4;
 		}
 		else {
 			let aux = 0
@@ -80,13 +80,13 @@ function calculate(demolition, construction, hidraulics, eletric, cladding, pain
 					aux += Number(((rooms[element].averageArea * cladding.qty[element] * claddingValue) / 5.2).toFixed(0))
 				}
 			});
-			newCladdingPrice = aux === 0 ? 0 : `R$ ${aux}`;
+			newCladdingPrice = aux === 0 ? 0 : aux;
 		}
 	}
 
 	const calculatePainting = () => {
 		if (painting.value.length === 9) {
-			newPaintingPrice = `R$ ${paintingValue * totalArea * 6}`;
+			newPaintingPrice = paintingValue * totalArea * 6;
 		}
 		else {
 			let aux = 0;
@@ -104,7 +104,7 @@ function calculate(demolition, construction, hidraulics, eletric, cladding, pain
 					aux += rooms[element].averageArea * painting.qty[element] * paintingValue
 				}
 			});
-			newPaintingPrice = aux === 0 ? 0 : `R$ ${aux}`;
+			newPaintingPrice = aux === 0 ? 0 : aux;
 		}
 	}
 

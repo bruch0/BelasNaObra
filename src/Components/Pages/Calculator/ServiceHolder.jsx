@@ -69,7 +69,7 @@ function ServiceHolder({service, isNumbered, isSelected, handleServices, rooms})
 					</SelectOption>
 				</ContainerSelectors>
 			}
-			<Value value={service.state.price === 0 ? '' : service.state.price} readOnly={true} enabled={service.state.enabled} numbered={service.numbered}/>
+			<Value value={service.state.price === 0 ? '' : `R$ ${service.state.price}`} readOnly={true} enabled={service.state.enabled} numbered={service.numbered}/>
 		</ServiceHolderDiv>
 	)
 }
@@ -106,13 +106,16 @@ const ServiceHolderDiv = styled.div`
 	}
 `
 
-const Container = styled.div`
+const Container = styled.button`
 	width: 180px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	cursor: pointer;
 	margin-right: 15px;
+	background-color: transparent;
+	font-family: 'Spartan';
+	font-size: 20px;
 	
 	svg {
 		color: ${props => props.isActive ? 'green' : ''};
