@@ -10,7 +10,7 @@ function About({viewportWidth}) {
 	const fadeProperties = {
 		duration: 3000,
 		transitionDuration: 500,
-		slidesToShow: viewportWidth > 600 ? 3 : 2,
+		slidesToShow: viewportWidth < 600 ? viewportWidth < 350 ? 1 : 2 : 3,
 		canSwipe: false
 	};
 
@@ -296,10 +296,19 @@ const SlideRatingDiv = styled.div`
 		font-weight: bold;
 	}
 
+	@media (max-width: 1050px) {
+		font-size: 2vw;
+	}
+
 	@media (max-width: 600px) {
 		border: none;
 		height: 200px;
 		padding: 0px 16%;
+		font-size: 2.5vw;
+	}
+
+	@media (max-width: 350px) {
+		font-size: 4vw;
 	}
 `
 

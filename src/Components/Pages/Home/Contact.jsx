@@ -21,13 +21,13 @@ function Contact() {
 				<Map src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467689.79719810525!2d-46.875492079696244!3d-23.68216038794643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce448183a461d1%3A0x9ba94b08ff335bae!2zU8OjbyBQYXVsbywgU1A!5e0!3m2!1spt-BR!2sbr!4v1633095371936!5m2!1spt-BR!2sbr' allowFullScreen={true} loading='lazy' title='Localização'/>
 			</MapWrapper>
 			<Contacts>
-				<span>Dúvidas e sugestões?</span>
+				<span>Dúvidas ou sugestões?</span>
 				{contacts.map((contact, index) => {
 					return (
 						<div key={index} >
 							{index === 1 ? <Social>Acompanhe nosso dia a dia nas redes sociais</Social> : ''}
-							<Holder href={contact.ref} target='_blank' color={contact.colored}>
-								<Icon color={contact.colored} alt={contact.name}>
+							<Holder href={contact.ref} target='_blank'>
+								<Icon alt={contact.name}>
 									{contact.icon}
 								</Icon>
 								<span>{contact.name}</span>
@@ -121,14 +121,14 @@ const Contacts = styled.div`
 `
 
 const Social = styled.p`
-	margin-top: 50px;
+	margin: 50px 0px 50px 0px;
 	text-align: center;
 	font-weight: bold;
 	font-size: 20px;
 `
 
 const Holder = styled.a`
-	height: 60px;
+	margin-top: 10px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -145,15 +145,14 @@ const Icon = styled.p`
 	font-weight: bold;
 	color: pink;
 	border: 0px;
-	padding: ${props => props.color ?'5px 5px' : '0px'};
+	padding: 0px;
 	border-radius: 50px;
-	background-color: ${props => props.color ?'#49db49' : ''};
 	cursor: pointer;
 	margin-right: 10px;
 
 	svg {
-		width: ${props => props.color ?'20px' : '30px'};
-		height: ${props => props.color ?'20px' : '30px'};
+		width: 30px;
+		height: 30px
 	}
 `
 

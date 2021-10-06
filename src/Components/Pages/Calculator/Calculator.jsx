@@ -3,6 +3,8 @@ import { useState } from "react";
 import styled from "styled-components";
 import ServiceHolder from "./ServiceHolder";
 import { calculate } from './result';
+import { AiOutlineInstagram, AiOutlineWhatsApp } from 'react-icons/ai'
+import { FiMail } from 'react-icons/fi'
 
 function Calculator() {
 	const [demolition, setDemolition] = useState({enabled: false, value: [], qty: [0, 0, 0, 0, 0, 0, 0, 0, 0], price: 0});
@@ -82,6 +84,13 @@ function Calculator() {
 		}
 	}
 
+	const contacts = [
+		{name: 'belasnaobra@gmail.com', icon: <FiMail />, ref: 'https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=someone@gmail.com'},
+		{name: 'WhatsApp', icon: <AiOutlineWhatsApp />, 	ref: 'https://wa.me/5511993100778?text=Ol%C3%A1!%20Fiz%20um%20or%C3%A7amento%20pelo%20seu%20site,%20gostaria%20de%20mais%20detalhes!'},
+		{name: '@belasnaobra', icon: <AiOutlineInstagram />, ref: 'https://www.instagram.com/belasnaobra/'},
+
+	]
+
 	return (
 		<CalculatorSection>
 			<Title>
@@ -118,6 +127,17 @@ function Calculator() {
 					value={total < 1500 ? 'R$ 1500' : `R$ ${total}`}
 				/>
 			</Total>
+			<PriceTitle>Quer um orçamento mais detalhado? Entre em contato com a gente =)</PriceTitle>
+			{contacts.map((contact, index) => {
+					return (
+						<Holder href={contact.ref} target='_blank' key={index}>
+							<Icon alt={contact.name}>
+								{contact.icon}
+							</Icon>
+							<span>{contact.name}</span>
+						</Holder>
+					)
+				})}
 		</CalculatorSection>
 	)
 }
@@ -197,11 +217,55 @@ const Total = styled.div`
 		height: 30px;
 	}
 
-	@media (max-width: 450px) {
+	@media (max-width: 600px) {
 		font-size: 30px;
 		flex-direction: column;
 		align-items: flex-start;
 	}
 `
+
+const PriceTitle = styled.div`
+	width: 100%;
+	height: 60px;
+	font-size: 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 50px;
+	border-radius: 15px 15px 0px 0px;
+
+	@media (max-width: 600px) {
+		font-size: 20px
+	}
+`
+
+const Holder = styled.a`
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+
+	:hover {
+		p {
+			background-color: ${props => props.color ?'#5ae0e0' : ''};
+		}
+	}
+`
+
+const Icon = styled.p`
+	font-weight: bold;
+	color: pink;
+	border: 0px;
+	padding: 0px;
+	border-radius: 50px;
+	cursor: pointer;
+	margin-right: 10px;
+
+	svg {
+		width: 30px;
+		height: 30px
+	}
+`
+
 
 export default Calculator

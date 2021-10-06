@@ -128,16 +128,12 @@ const Logo = styled.img`
 	cursor: pointer;
 
 	@media (max-width: 600px) {
-		width: 100px;
-		height: 60px;
-	}
-	@media (max-width: 400px) {
 		width: 80px;
-		height: 48px;
+		height: 60px;
 	}
 
 	@media (max-width: 300px) {
-		width: 80px;
+		width: 60px;
 		height: 48px;
 	}
 `
