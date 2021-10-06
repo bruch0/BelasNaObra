@@ -137,12 +137,14 @@ const InfoCard = styled.div`
 	justify-content: space-around;
 	font-size: 1.5vw;
 	text-align: center;
+	line-height: 2vw;
 
 	@media (max-width: 600px) {
 		width: 90%;
 		height: 30vw;
 		font-size: 3vw;
 		margin-bottom: 15px;
+		line-height: 3.2vw;
 	}
 `
 
