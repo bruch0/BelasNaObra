@@ -127,10 +127,12 @@ function Calculator() {
 					value={total < 1500 ? 'R$ 1500' : `R$ ${total}`}
 				/>
 			</Total>
-			<PriceTitle>Quer um orçamento mais detalhado? Entre em contato com a gente =)</PriceTitle>
+			<PriceTitle enabled={area !== '' && Number(area) !== 0 && total !== 0 ? 1 : 0} >
+				Quer um orçamento mais detalhado? Entre em contato com a gente =)
+			</PriceTitle>
 			{contacts.map((contact, index) => {
 					return (
-						<Holder href={contact.ref} target='_blank' key={index}>
+						<Holder href={contact.ref} target='_blank' enabled={area !== '' && Number(area) !== 0 && total !== 0 ? 1 : 0}  key={index}>
 							<Icon alt={contact.name}>
 								{contact.icon}
 							</Icon>
@@ -228,7 +230,7 @@ const PriceTitle = styled.div`
 	width: 100%;
 	height: 60px;
 	font-size: 30px;
-	display: flex;
+	display: ${props => props.enabled ? 'flex' : 'none'};
 	justify-content: space-between;
 	align-items: center;
 	margin-top: 50px;
@@ -241,7 +243,7 @@ const PriceTitle = styled.div`
 
 const Holder = styled.a`
 	margin-top: 10px;
-	display: flex;
+	display: ${props => props.enabled ? 'flex' : 'none'};
 	align-items: center;
 	cursor: pointer;
 
