@@ -107,7 +107,7 @@ const ServiceHolderDiv = styled.div`
 `
 
 const Container = styled.button`
-	width: 180px;
+	width: 200px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -183,7 +183,7 @@ const SelectOption = styled.button`
 `
 
 const Value = styled.input`
-	width: 130px;
+	width: 120px;
 	height: 60px;
 	margin: 0px 0px 0px 9px;
 	display: ${props => props.enabled ? 'block' : 'none'};

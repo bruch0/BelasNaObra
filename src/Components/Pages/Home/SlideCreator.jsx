@@ -17,7 +17,6 @@ import eletric11 from '../../../assets/Eletric/eletric11.jpeg'
 import eletric12 from '../../../assets/Eletric/eletric12.jpeg'
 
 import hidraulic2 from '../../../assets/Hidraulic/hidraulic2.jpeg'
-import hidraulic3 from '../../../assets/Hidraulic/hidraulic3.jpeg'
 import hidraulic4 from '../../../assets/Hidraulic/hidraulic4.jpeg'
 import hidraulic5 from '../../../assets/Hidraulic/hidraulic5.jpeg'
 import hidraulic6 from '../../../assets/Hidraulic/hidraulic6.jpeg'
@@ -27,10 +26,15 @@ import hidraulic9 from '../../../assets/Hidraulic/hidraulic9.jpeg'
 import hidraulic10 from '../../../assets/Hidraulic/hidraulic10.jpeg'
 import hidraulic11 from '../../../assets/Hidraulic/hidraulic11.gif'
 
+import lining1 from '../../../assets/Lining/lining1.jpeg'
 import lining2 from '../../../assets/Lining/lining2.jpeg'
 import lining3 from '../../../assets/Lining/lining3.jpeg'
 import lining4 from '../../../assets/Lining/lining4.jpeg'
 import lining5 from '../../../assets/Lining/lining5.jpeg'
+import lining6 from '../../../assets/Lining/lining6.jpeg'
+import lining7 from '../../../assets/Lining/lining7.jpeg'
+import lining8 from '../../../assets/Lining/lining8.jpeg'
+import lining9 from '../../../assets/Lining/lining9.jpeg'
 
 import painting1 from '../../../assets/Painting/painting1.jpeg'
 import painting2 from '../../../assets/Painting/painting2.jpeg'
@@ -43,6 +47,18 @@ import painting10 from '../../../assets/Painting/painting10.jpeg'
 import painting11 from '../../../assets/Painting/painting11.jpeg'
 import painting12 from '../../../assets/Painting/painting12.jpeg'
 import painting15 from '../../../assets/Painting/painting15.jpeg'
+
+import project1 from '../../../assets/Projects/project1.jpeg'
+import project2 from '../../../assets/Projects/project2.jpeg'
+import project3 from '../../../assets/Projects/project3.jpeg'
+import project4 from '../../../assets/Projects/project4.jpeg'
+import project5 from '../../../assets/Projects/project5.jpeg'
+import project6 from '../../../assets/Projects/project6.jpeg'
+import project7 from '../../../assets/Projects/project7.jpeg'
+import project8 from '../../../assets/Projects/project8.jpeg'
+import project9 from '../../../assets/Projects/project9.jpeg'
+import project10 from '../../../assets/Projects/project10.gif'
+
 
 const slidesPainting = () => {
 	const slides = [
@@ -67,14 +83,21 @@ const slidesEletric = () => {
 
 const slidesHidraulic = () => {
 	const slides = [
-		hidraulic2, hidraulic3, hidraulic4,	hidraulic5, hidraulic6, hidraulic7, hidraulic8, hidraulic9, hidraulic10, hidraulic11
+		hidraulic2, hidraulic4,	hidraulic5, hidraulic6, hidraulic7, hidraulic8, hidraulic9, hidraulic10, hidraulic11
 	]
 	return slides
 }
 
 const slidesLining = () => {
 	const slides = [
-		lining2, lining3, lining4,	lining5
+		lining1,lining2, lining3, lining4,	lining5, lining6, lining7, lining8, lining9
+	]
+	return slides
+}
+
+const slidesProjects = () => {
+	const slides = [
+		project1, project2, project3, project4, project5, project6, project7, project8, project9, project10
 	]
 	return slides
 }
@@ -85,4 +108,5 @@ export {
 	slidesPainting,
 	slidesHidraulic,
 	slidesLining,
+	slidesProjects,
 }

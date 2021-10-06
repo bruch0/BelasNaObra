@@ -9,7 +9,10 @@ import {
 	slidesPainting,
 	slidesHidraulic,
 	slidesLining,
+	slidesProjects
 } from './SlideCreator'
+import { AiOutlineWhatsApp, AiOutlineArrowRight } from 'react-icons/ai'
+
 
 import projectLogo from '../../../assets/Icons/project.png'
 import reportsLogo from '../../../assets/Icons/reports.png'
@@ -20,6 +23,7 @@ import liningLogo from '../../../assets/Icons/lining.png'
 import hidraulicLogo from '../../../assets/Icons/hidraulic.png'
 import paintingLogo from '../../../assets/Icons/painting.png'
 
+import Process from "./Process";
 import Template from "./Template";
 import Contact from "./Contact";
 
@@ -31,6 +35,7 @@ function Home({viewportWidth}) {
 	const slidePainting = slidesPainting();
 	const slideHidraulic = slidesHidraulic();
 	const slideLining = slidesLining();
+	const slideProject = slidesProjects();
 
 	const reportsRef = useRef()
 	const projectsRef = useRef();
@@ -40,11 +45,13 @@ function Home({viewportWidth}) {
 	const hidraulicsRef = useRef();
 	const paintingRef = useRef();
 
+	const textWhatsApp = encodeURI('Oi, eu acessei o site de vocês, podem me ajudar?');
+
 
 	const services = 
 	[
-		{icon: reportsLogo, name: 'Laudos e vistorias', ref: reportsRef, slides: slideEletric},
-		{icon: projectLogo, name: 'Projetos', ref: projectsRef, slides: slideEletric},
+		{icon: reportsLogo, name: 'Laudos e vistorias', ref: reportsRef},
+		{icon: projectLogo, name: 'Projetos', ref: projectsRef, slides: slideProject},
 		{icon: eletricLogo, name: 'Elétrica e iluminação', ref: eletricRef, slides: slideEletric},
 		{icon: claddingLogo, name: 'Revestimento', ref: claddingRef, slides: slideCladding},
 		{icon: calculatorLogo, name: 'Calculadora', link: '/calculadora'},
@@ -55,6 +62,7 @@ function Home({viewportWidth}) {
 
 	return (
 		<>
+			<Process />
 			<Title>Serviços</Title>	
 			<OptionsContainer>
 				{services.map((service, index) => 
@@ -66,8 +74,21 @@ function Home({viewportWidth}) {
 						key={index}
 					/>)}
 			</OptionsContainer>
+
+			<div ref={reportsRef}></div>
+			<ReportsSection>
+				<ReportsTitle>
+					<ReportsIcon src={services[0].icon} />
+					<span>{services[0].name}</span>
+				</ReportsTitle>
+				<ul>
+					<li><AiOutlineArrowRight /> Checklist - Vistoria nas chaves</li>
+					<li><AiOutlineArrowRight /> Checklist - Finalização da obra</li>
+					<li><AiOutlineArrowRight /> Visita técnica - Avaliação e medição do local</li>
+				</ul>
+			</ReportsSection>
 			
-			{services.map((service, index) => {
+			{services.slice(1).map((service, index) => {
 				if (service.slides) {
 					return (
 						<section ref={service.ref} key={index}>
@@ -82,6 +103,9 @@ function Home({viewportWidth}) {
 				}
 			})}
 			<Contact />
+			<LinkWhatsApp href={`https://wa.me/5511993100778?text=${textWhatsApp}`} target='_blank'>
+				<AiOutlineWhatsApp />
+			</LinkWhatsApp>
 		</>
 	)
 }
@@ -110,17 +134,17 @@ function Card({icon, name, scroll, link}) {
 }
 
 const Title = styled.p`
-	margin: 200px 0px 0px 5%;
+	margin: 20px 0px 0px 5%;
 	height: 60px;
 	font-size: 30px;
 
 	@media (max-width: 600px) {
-		margin: 120px 0px 0px 5%;
+		margin: 20px 0px 0px 5%;
 		font-size: 8vw;
 	}
 
 	@media (max-width: 400px) {
-		margin: 110px 0px 0px 5%;
+		margin: 10px 0px 0px 5%;
 		font-size: 34px;
 		height: 45px;
 	}
@@ -162,6 +186,64 @@ const OptionCard = styled.button`
 	}
 `
 
+const ReportsSection = styled.div`
+	width: 100%;
+	padding: 5%;
+
+	ul {
+		padding: 1.5% 0px 1.5% 330px;
+	}
+
+	li {
+		margin-bottom: 15px;
+		font-size: 20px;
+	}
+
+	@media (max-width: 800px) {
+		ul {
+			padding: 1.5% 0px 1.5% 50%;
+		}
+	}
+
+	@media (max-width: 600px) {
+		ul {
+			padding: 1.5% 0px 1.5% 10%;
+		}
+	}
+`
+
+const ReportsTitle = styled.div`
+	width: 100%;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	font-size: 30px;
+	color: #646262;
+	background: #FFFFFF;
+	border: 1px solid #DBDBDB;
+	border-radius: 15px 15px 0px 0px;
+
+	svg {
+		height: 30px;
+	}
+
+	@media (max-width: 600px) {
+		padding-left: 5px;
+		display: flex;
+		align-items: center;
+	}
+
+	@media (max-width: 450px) {
+		font-size: 5vw;
+	}
+`
+
+const ReportsIcon = styled.img`
+	height: 40px;
+	width: 40px;
+	margin: 0px 10px 5px 10px;
+`
+
 const Icon = styled.img`
 	height: 50%;
 	width: 50%;
@@ -173,6 +255,24 @@ const CardName = styled.p`
 
 	@media (max-width: 600px) {
 		font-size: 4.4vw;
+	}
+`
+
+const LinkWhatsApp = styled.a`
+	height: 50px;
+	width: 50px;
+	padding: 8px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 10;
+	background-color: green;
+	color: white;
+	border-radius: 25px;
+
+	svg {
+		height: 35px;
+		width: 35px;
 	}
 `
 

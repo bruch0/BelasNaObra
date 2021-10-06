@@ -28,8 +28,8 @@ function calculate(demolition, construction, hidraulics, eletric, cladding, pain
 		{name: 'Toilet', averageArea: 28}
 	]
 	
-	const demolitionValue = 3000;
-	const constructionValue = 300;
+	const demolitionValue = 2000;
+	const constructionValue = 100;
 	const hidraulicsValue = 600;
 	const eletricValue = 300;
 	const claddingValue = 90;

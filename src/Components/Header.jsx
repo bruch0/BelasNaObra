@@ -29,7 +29,7 @@ function Header() {
 						if (history.location.pathname !== '/') {
 							history.push('/')
 						}
-						setTimeout(() => scrollTo({top: 9999999, left: 0, behavior: 'smooth'}), 1);
+						setTimeout(() => scrollTo({top: 7500, left: 0, behavior: 'smooth'}), 1);
 					}}>
 					Contato
 				</Contact>

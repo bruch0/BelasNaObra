@@ -45,7 +45,7 @@ function App() {
                         <Calculator />	
                     </Route>
                     <Route path='/sobre' exact>
-                        <About />	
+                        <About viewportWidth={viewportDimensions.width} />	
                     </Route>
                 </Switch>
             </BrowserRouter>
