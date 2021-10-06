@@ -25,9 +25,9 @@ function About({viewportWidth}) {
 
 	const infos = 
 	[
-		{name: 'Missão', text: 'A Belas na obra é uma equipe de mulheres que visam a integração de mulheres na construção civil.' },
-		{name: 'Visão', text: 'Quebrar o tabu da construção civil e oferecer ao cliente a melhor experiência de um local completo dirigido por mulheres.'},
-		{name: 'Valores', text: 'As Belas visam força de vontade e trabalho em equipe, pois juntas somos um time capaz de transformar espaços em um curto prazo e com o máximo de detalhes.'},
+		{name: 'Missão', text: 'Proporcionar a integração de mulheres na mão de obra da construção civil, quebrando o tabu existente na sociedade atual.' },
+		{name: 'Visão', text: 'Revelar o valor de mulheres liderando o ambiente da construção civil, proporcionando ao cliente a melhor experiência e realizando sonhos!'},
+		{name: 'Valores', text: 'As belas possuem um grande diferencial, capaz de transformar espaços em curto prazo, sem negociar o trabalho em unidade da equipe, visando finos acabamentos e detalhes da obra.'},
 	]
 	
 	const cardsInfos = 
