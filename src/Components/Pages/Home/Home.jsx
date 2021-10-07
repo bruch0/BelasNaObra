@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useRef } from "react/cjs/react.development";
+import { useRef } from "react"
 import { Link } from 'react-router-dom';
 import smoothscroll from 'smoothscroll-polyfill';
 import { 
