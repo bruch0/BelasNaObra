@@ -4,7 +4,7 @@ import { AiOutlineArrowRight } from 'react-icons/ai'
 
 function Process() {
 	const processes = [
-		'Entre em contato por whatsapp ou email e solicite um orçamento: sendo previsto pela calculadora ou com um consultor', 'Nos diga se quer contratar apenas a mão de obra ou se precisa de um projeto', 'Indicaremos entre o projeto básico e o completo com um de nossos arquitetos parceitos através do seu estilo', 'Indicaremos forcenedores, podendo também ser acompanhados outros de fora', 'Iniciaremos a obra com documentação e prazos em cronograma', 'Conclusão da obra e limpeza'
+		'Contate-nos através do whatsapp para um orçamento personalizado', 'Nos informe se você já tem um projeto pronto', 'Receba 2 tipos de projeto conforme sua solicitação', 'Indicaremos excelentes fornecedores para auxilio da obra', 'A obra será iniciada mediante cronograma, junto à documentação', 'Conclusão, limpeza e acabamento da obra'
 	]
 	
 	return (
