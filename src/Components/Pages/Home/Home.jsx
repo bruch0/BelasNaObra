@@ -37,7 +37,7 @@ function Home({viewportWidth}) {
 	const slideLining = slidesLining();
 	const slideProject = slidesProjects();
 
-	const reportsRef = useRef()
+	const reportsRef = useRef();
 	const projectsRef = useRef();
 	const eletricRef = useRef();
 	const claddingRef = useRef();

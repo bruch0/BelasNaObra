@@ -4,7 +4,7 @@ import { AiOutlineArrowRight } from 'react-icons/ai'
 
 function Process() {
 	const processes = [
-		'Contate-nos através do whatsapp para um orçamento personalizado', 'Nos informe se você já tem um projeto pronto', 'Receba 2 tipos de projeto conforme sua solicitação', 'Indicaremos excelentes fornecedores para auxilio da obra', 'A obra será iniciada mediante cronograma, junto à documentação', 'Conclusão, limpeza e acabamento da obra'
+		'Contate-nos através do whatsapp para um orçamento personalizado', 'Nos informe se você já tem um projeto pronto', 'Receba 2 tipos de projeto conforme sua solicitação', 'Indicaremos excelentes fornecedores para auxílio da obra', 'A obra será iniciada mediante cronograma, junto à documentação', 'Conclusão, limpeza e acabamento da obra'
 	]
 	
 	return (
