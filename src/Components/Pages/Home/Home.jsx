@@ -65,14 +65,14 @@ function Home({viewportWidth}) {
 			<Process />
 			<Title>Serviços</Title>	
 			<OptionsContainer>
-				{services.map((service, index) => 
+				{services ? services.map((service, index) => 
 					<Card 
 						icon={service.icon}
 						name={service.name}
 						scroll={service.ref ? service.ref : ''}
 						link={service.link}
 						key={index}
-					/>)}
+					/>) : ''}
 			</OptionsContainer>
 
 			<div ref={reportsRef}></div>
