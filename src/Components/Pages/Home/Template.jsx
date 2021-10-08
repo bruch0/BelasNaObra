@@ -7,7 +7,7 @@ function Template({viewportWidth, logo, slides, name}) {
 	const fadeProperties = {
 		duration: 2000,
 		transitionDuration: 500,
-		slidesToShow: viewportWidth < 1000 ? viewportWidth < 600 ? 1 : 2 : 3,
+		slidesToShow: viewportWidth < 1150 ? viewportWidth < 600 ? 1 : 2 : 3,
 		slidesToScroll: 1,
 		canSwipe: false
 	}
