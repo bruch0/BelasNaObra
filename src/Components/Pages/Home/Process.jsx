@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { AiOutlineArrowRight } from 'react-icons/ai'
 
 function Process() {
 	const processes = [
-		'Contate-nos através do whatsapp para um orçamento personalizado', 'Nos informe se você já tem um projeto pronto', 'Receba 2 tipos de projeto conforme sua solicitação', 'Indicaremos excelentes fornecedores para auxílio da obra', 'A obra será iniciada mediante cronograma, junto à documentação', 'Conclusão, limpeza e acabamento da obra'
+		'Contate-nos através do whatsapp para um orçamento personalizado', 'Nos informe se você quer um projeto, obra, ou ambos', 'Receba seu orçamento e orçamentos de terceiros', 'Liberação das documentações e contrato', 'Início da obra mediante a cronograma', 'Conclusão, limpeza e entrega da obra'
 	]
 	
 	return (
@@ -16,7 +15,6 @@ function Process() {
 			{processes.map((process, index) => {
 				return (
 					<ProcessCard key={index}>
-						<AiOutlineArrowRight />
 						<p>{process}</p>
 					</ProcessCard>
 				)
@@ -49,67 +47,63 @@ const Title = styled.p`
 	}
 `
 
-const Processes = styled.section`
-	width: 100%;
-	display: grid;
-	grid-template-columns: repeat(6, 1fr);
-	gap: 4%;
+const Processes = styled.ol`
+	width: 60%;
+	list-style: none;
+	`
 
-	@media (max-width: 600px) {
-		grid-template-columns: repeat(2, 1fr);
-	}
-`
-
-const ProcessCard = styled.div`
-	width: 100%;
-	height: 12vw;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-around;
-	background-color: #FFFFFF;
-	border: 1px solid #DBDBDB;
-	border-radius: 2vw;
-	box-shadow: 0px 4px 4px 0px #00000040;
+const ProcessCard = styled.li`
+	width: calc(100% - 40px);
 	padding: 0;
-	margin: 0px 0px 40px 0px;
+	display: flex;
+	align-items: center;
+	margin: 0px 0px 20px 0px;
 	padding: 5px;
-	font-size: 1.2vw;
-	text-align: center;
+	vertical-align: middle;
+	font-size: 1.4vw;
 	position: relative;
-
-	:last-child {
-		svg {
-			display: none;
-		}
+	
+	:first-child {
+		counter-reset: index;
 	}
-
-	svg {
-		position: absolute;
-		width: 10%;
-		height: 10%;
-		top: 50%;
-		right: -20%;
+	
+	:before {
+		content: counter(index);
+		counter-increment: index;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-shrink: 0;
+		border-radius: 50%;
+		background: #fb8095;
+		margin-right: 5px;
+		text-align: center;
+		color: white;
+		font-size: 25px;
+		line-height: 28px;
+		font-weight: bold;
 	}
-
+	
 	@media (max-width: 900px) {
-		svg {
-			width: 20%;
-			height: 20%;
-			right: -25%;
-		}
+		font-size: 2vw;
 	}
 
 	@media (max-width: 600px) {
+		align-items: flex-start;
 		width: 100%;
-		height: 30vw;
-		font-size: 3vw;
-		margin-bottom: 0px;
+		font-size: 4vw;
 
-		svg {
-			display: none;
+		:before {
+			width: 10vw;
+			height: 10vw;
+			font-size: 20px;
+			line-height: 20px;
+			font-weight: bold;
 		}
 	}
+
 `
 
 export default Process

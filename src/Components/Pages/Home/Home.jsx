@@ -46,7 +46,6 @@ function Home({viewportWidth}) {
 
 	const textWhatsApp = encodeURI('Oi, eu acessei o site de vocês, podem me ajudar?');
 
-
 	const services = 
 	[
 		{icon: reportsLogo, name: 'Laudos e vistorias', ref: reportsRef},
@@ -54,7 +53,7 @@ function Home({viewportWidth}) {
 		{icon: eletricLogo, name: 'Elétrica e iluminação', ref: eletricRef, slides: slideEletric},
 		{icon: claddingLogo, name: 'Revestimento', ref: claddingRef, slides: slideCladding},
 		{icon: calculatorLogo, name: 'Calculadora', link: '/calculadora'},
-		{icon: liningLogo, name: 'Gesso (forro ou drywall)', ref: liningRef, slides: slideLining, cut: true},
+		{icon: liningLogo, name: 'Gesso (forro e drywall)', ref: liningRef, slides: slideLining, cut: true},
 		{icon: hidraulicLogo, name: 'Hidráulica', ref: hidraulicsRef, slides: slideHidraulic},
 		{icon: paintingLogo, name: 'Pintura', ref: paintingRef, slides: slidePainting},
 	];
@@ -152,9 +151,9 @@ const Title = styled.p`
 const OptionsContainer = styled.main`
 	width: 100%;
 	padding: 0px 5%;
+	gap: 6%;
 	display: grid;
     grid-template-columns: repeat(4, 1fr);
-	gap: 4%;
 
 	a {
 		height: calc(22vw - 36px);
@@ -250,7 +249,7 @@ const Icon = styled.img`
 `
 
 const CardName = styled.p`
-	font-size: 1.8vw;
+	font-size: 1.6vw;
 
 	@media (max-width: 600px) {
 		font-size: 4.4vw;

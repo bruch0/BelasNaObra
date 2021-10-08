@@ -16,11 +16,11 @@ function About({viewportWidth}) {
 
 	const ratings = 
 	[
-		{name: 'Ana Carolina', text: 'A planta elétrica é incrível! A Isa se compromete em manter a empresa apenas com mão de obra feminina!'},
-		{name: 'Kevin', text: 'A equipe da Belas na obra é muito prestativa, tem muito profissionalismo e seriedade. Agradeço eternamente!'},
-		{name: 'Lívia Domingues', text: 'Agradeço pelo trabalho executado em meu apartamento. A mão de obra da Belas é excelente e o atendimento impecável. Obrigada por fazer parte do meu sonho!'},
+		{name: 'Ana Carolina', text: 'A planta elétrica é incrível! As Belas se compromete em manter a empresa apenas com mão de obra feminina!'},
+		{name: 'Kevin', text: 'A equipe das Belas na obra é muito prestativa, tem muito profissionalismo e seriedade. Agradeço eternamente!'},
+		{name: 'Lívia Domingues', text: 'Agradeço pelo trabalho executado em meu apartamento. A mão de obra das Belas é excelente e o atendimento impecável. Obrigada por fazer parte do meu sonho!'},
 		{name: 'Bianca', text: 'A gente gostou! Ficou bem bonito e gostamos muito da assistência e ajuda para comprar os materiais!'},
-		{name: 'Carla', text: 'O suporte da Belas é incrível!'},
+		{name: 'Carla', text: 'O suporte das Belas é incrível!'},
 	]
 
 	const infos = 
@@ -35,12 +35,12 @@ function About({viewportWidth}) {
 		{icon: <RiCompasses2Line />, number: '10+', text: 'arquitetos parceiros'},
 		{icon: <AiOutlineFileDone />, number: '100+', text: 'projetos desenvolvidos'},
 		{icon: <BsHouse />, number: '30+', text: 'obras entregues'},
-		{icon: <AiOutlineWoman />, number: '30+', text: 'mulheres formadas conosco'},
+		{icon: <AiOutlineWoman />, number: '30+', text: 'mulheres formadas com a gente'},
 	]
 	
 	return (
 		<>
-		<Title>Sobre a Belas na Obra</Title>
+		<Title>As Belas,</Title>
 		<Container>
 			<Wrapper>
 				{infos.map((info, index) => {
@@ -71,7 +71,7 @@ function About({viewportWidth}) {
 			</DataSection>
 
 			<InfoTitle>
-				Avaliações de clientes
+				Clientes:
 			</InfoTitle>
 			<SlideWrapper>
 				<Slide {...fadeProperties}>

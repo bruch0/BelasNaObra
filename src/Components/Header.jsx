@@ -123,7 +123,7 @@ const Contact = styled.a`
 `
 
 const Logo = styled.img`
-	width: 150px;
+	width: 130px;
 	border-radius: 25px;
 	cursor: pointer;
 
