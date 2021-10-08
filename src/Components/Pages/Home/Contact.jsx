@@ -5,7 +5,7 @@ import { FiMail, FiFacebook } from 'react-icons/fi'
 
 function Contact() {
 	const contacts = [
-		{name: 'belasnaobra@gmail.com', icon: <FiMail />, ref: 'https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=someone@gmail.com'},
+		{name: 'contato@belasnaobra.com', icon: <FiMail />, ref: 'https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=contato@belasnaobra.com'},
 		{name: '/belasnaobra', icon: <FiFacebook />, 	ref: 'https://www.facebook.com/belasnaobra'},
 		{name: '@belasnaobra', icon: <AiOutlineInstagram />, ref: 'https://www.instagram.com/belasnaobra/'},
 
