@@ -160,7 +160,7 @@ const OptionsContainer = styled.main`
 	}
 
 	@media (max-width: 600px) {
-		height: 180vw;
+		height: 200vw;
 		grid-template-columns: repeat(2, 1fr);
 	}
 `
