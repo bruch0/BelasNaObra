@@ -19,20 +19,24 @@ function Template({viewportWidth, logo, slides, name}) {
 				<Icon src={logo} />
 				<div>{name}</div>
 			</Title>
-			<p>Tipos de projeto</p>
-			<span>Básico</span>
-			<ul>
-				<li><AiOutlineArrowRight /> 3D</li>
-				<li><AiOutlineArrowRight /> Consultoria</li>
-				<li><AiOutlineArrowRight /> Gerenciamento de obra</li>
-			</ul>
-			<span>Completo</span>
-			<ul>
-				<li><AiOutlineArrowRight /> Arquiteto ou conosco</li>
-				<li><AiOutlineArrowRight /> Planta baixa</li>
-				<li><AiOutlineArrowRight /> Detalhamento</li>
-				<li><AiOutlineArrowRight /> Acompanhamento de obra</li>
-			</ul>
+			{name === 'Projetos' ? 
+			<>
+				<p>Tipos de projeto</p>
+				<span>Básico</span>
+				<ul>
+					<li><AiOutlineArrowRight /> 3D</li>
+					<li><AiOutlineArrowRight /> Consultoria</li>
+					<li><AiOutlineArrowRight /> Gerenciamento de obra</li>
+				</ul>
+				<span>Completo</span>
+				<ul>
+					<li><AiOutlineArrowRight /> Arquiteto ou conosco</li>
+					<li><AiOutlineArrowRight /> Planta baixa</li>
+					<li><AiOutlineArrowRight /> Detalhamento</li>
+					<li><AiOutlineArrowRight /> Acompanhamento de obra</li>
+				</ul>
+			</>
+			: ''}
 			<SlideshowContainer>
 			<Slide {...fadeProperties}>
 				{slides ? slides.map((slide, index) => <SlideImg slide={slide} alt='foto' key={index} />) : ''}
