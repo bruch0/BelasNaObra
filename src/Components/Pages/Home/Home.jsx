@@ -53,7 +53,7 @@ function Home({viewportWidth}) {
 		{icon: eletricLogo, name: 'Elétrica e iluminação', ref: eletricRef, slides: slideEletric},
 		{icon: claddingLogo, name: 'Revestimento', ref: claddingRef, slides: slideCladding},
 		{icon: calculatorLogo, name: 'Calculadora', link: '/calculadora'},
-		{icon: liningLogo, name: 'Gesso (forro e drywall)', ref: liningRef, slides: slideLining, cut: true},
+		{icon: liningLogo, name: 'Gesso (forro e drywall)', ref: liningRef, slides: slideLining},
 		{icon: hidraulicLogo, name: 'Hidráulica', ref: hidraulicsRef, slides: slideHidraulic},
 		{icon: paintingLogo, name: 'Pintura', ref: paintingRef, slides: slidePainting},
 	];
@@ -94,7 +94,7 @@ function Home({viewportWidth}) {
 								viewportWidth={viewportWidth} 
 								logo={service.icon} 
 								slides={service.slides ? service.slides : ''} 
-								name={service.cut ? service.name.split(' ')[0] : service.name}
+								name={service.name}
 							/>
 						</section>
 					)
