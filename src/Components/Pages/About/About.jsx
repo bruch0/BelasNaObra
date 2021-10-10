@@ -57,7 +57,7 @@ function About({viewportWidth}) {
 				<InfoTitle>
 					Por que contratar as Belas?
 				</InfoTitle>
-				Nós Belas prezamos pela realidade, funcionalidade e preço justo. Acreditamos que uma obra é a realização de um sonho e nós temos tudo o que você precisa para seu cantinho em um lugar só.
+				Nós Belas prezamos pela realidade, funcionalidade e preço justo. Acreditamos que uma obra é a realização de um sonho e nós temos tudo o que precisa para seu cantinho em um só lugar.
 			</InfoSection>
 			<DataSection>
 				{cardsInfos.map((card, index) => {
