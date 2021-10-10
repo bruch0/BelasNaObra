@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-import { AiOutlineFileDone, AiOutlineWoman } from 'react-icons/ai'
+import { AiOutlineFileDone } from 'react-icons/ai'
 import { RiCompasses2Line } from 'react-icons/ri'
 import { BsHouse } from 'react-icons/bs'
+import { BiBox } from 'react-icons/bi'
 import { Slide } from 'react-slideshow-image'
 
 function About({viewportWidth}) {
@@ -35,7 +36,7 @@ function About({viewportWidth}) {
 		{icon: <RiCompasses2Line />, number: '10+', text: 'arquitetos parceiros'},
 		{icon: <AiOutlineFileDone />, number: '100+', text: 'projetos desenvolvidos'},
 		{icon: <BsHouse />, number: '30+', text: 'obras entregues'},
-		{icon: <AiOutlineWoman />, number: '30+', text: 'mulheres formadas com a gente'},
+		{icon: <BiBox />, number: '30+', text: 'fornecedores terceiros'},
 	]
 	
 	return (
@@ -56,7 +57,7 @@ function About({viewportWidth}) {
 				<InfoTitle>
 					Por que contratar as Belas?
 				</InfoTitle>
-				Nós prezamos pela mão de obra feminina e tornamos seu sonho realidade. Aqui nós projetamos, executamos e decoramos sua casa, do zero. Temos disposição de arquitetos que vão fazer de tudo para que seu lar fique do jeito que você planejou!
+				Nós Belas prezamos pela realidade, funcionalidade e preço justo. Acreditamos que uma obra é a realização de um sonho e nós temos tudo o que você precisa para seu cantinho em um lugar só.
 			</InfoSection>
 			<DataSection>
 				{cardsInfos.map((card, index) => {

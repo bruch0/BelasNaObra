@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Slide } from 'react-slideshow-image'
+import { AiOutlineArrowRight } from "react-icons/ai";
 import 'react-slideshow-image/dist/styles.css'
 
 function Template({viewportWidth, logo, slides, name}) {
@@ -16,8 +17,22 @@ function Template({viewportWidth, logo, slides, name}) {
 		<TemplateSection>
 			<Title>
 				<Icon src={logo} />
-				<span>{name}</span>
+				<div>{name}</div>
 			</Title>
+			<p>Tipos de projeto</p>
+			<span>Básico</span>
+			<ul>
+				<li><AiOutlineArrowRight /> 3D</li>
+				<li><AiOutlineArrowRight /> Consultoria</li>
+				<li><AiOutlineArrowRight /> Gerenciamento de obra</li>
+			</ul>
+			<span>Completo</span>
+			<ul>
+				<li><AiOutlineArrowRight /> Arquiteto ou conosco</li>
+				<li><AiOutlineArrowRight /> Planta baixa</li>
+				<li><AiOutlineArrowRight /> Detalhamento</li>
+				<li><AiOutlineArrowRight /> Acompanhamento de obra</li>
+			</ul>
 			<SlideshowContainer>
 			<Slide {...fadeProperties}>
 				{slides ? slides.map((slide, index) => <SlideImg slide={slide} alt='foto' key={index} />) : ''}
@@ -30,6 +45,47 @@ function Template({viewportWidth, logo, slides, name}) {
 const TemplateSection = styled.div`
 	width: 100%;
 	padding: 5%;
+
+	p {
+		font-size: 30px;
+		color: #646262;
+		padding: 1.5% 0px 1.5% 330px;
+		
+		@media (max-width: 450px) {
+			font-size: 5vw;
+		}
+	}
+
+	span {
+		font-size: 25px;
+		color: #646262;
+		padding: 1.5% 0px 1.5% 330px;
+		
+		@media (max-width: 450px) {
+			font-size: 5vw;
+		}
+	}
+
+	ul {
+		padding: 1.5% 0px 1.5% 330px;
+	}
+
+	li {
+		margin-bottom: 15px;
+		font-size: 20px;
+	}
+
+	@media (max-width: 800px) {
+		ul, p, span {
+			padding: 1.5% 0px 1.5% 50%;
+		}
+	}
+
+	@media (max-width: 600px) {
+		ul, p, span {
+			padding: 1.5% 0px 1.5% 10%;
+		}
+	}
 `
 
 const Title = styled.div`

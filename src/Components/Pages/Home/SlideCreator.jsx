@@ -52,7 +52,6 @@ import project6 from '../../../assets/Projects/project6.jpeg'
 import project7 from '../../../assets/Projects/project7.jpeg'
 import project8 from '../../../assets/Projects/project8.jpeg'
 import project9 from '../../../assets/Projects/project9.jpeg'
-import project10 from '../../../assets/Projects/project10.png'
 
 
 const slidesPainting = () => {
@@ -92,7 +91,7 @@ const slidesLining = () => {
 
 const slidesProjects = () => {
 	const slides = [
-		project1, project2, project3, project4, project5, project6, project7, project8, project9, project10
+		project1, project2, project3, project4, project5, project6, project7, project8, project9
 	]
 	return slides
 }
