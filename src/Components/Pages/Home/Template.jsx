@@ -21,7 +21,6 @@ function Template({viewportWidth, logo, slides, name}) {
 			</Title>
 			{name === 'Projetos' ? 
 			<>
-				<p>Tipos de projeto</p>
 				<span>Básico</span>
 				<ul>
 					<li><AiOutlineArrowRight /> 3D</li>
@@ -48,7 +47,7 @@ function Template({viewportWidth, logo, slides, name}) {
 
 const TemplateSection = styled.div`
 	width: 100%;
-	padding: 5%;
+	padding: 2.5% 5%;
 
 	p {
 		font-size: 30px;
@@ -89,6 +88,7 @@ const TemplateSection = styled.div`
 		ul, p, span {
 			padding: 1.5% 0px 1.5% 10%;
 		}
+		padding: 5%;
 	}
 `
 

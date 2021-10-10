@@ -48,7 +48,7 @@ const Title = styled.p`
 `
 
 const Processes = styled.ol`
-	width: 60%;
+	width: 100%;
 	list-style: none;
 	`
 

@@ -121,7 +121,7 @@ const Contacts = styled.div`
 `
 
 const Social = styled.p`
-	margin: 50px 0px 50px 0px;
+	margin: 50px 0px 10px 0px;
 	text-align: center;
 	font-weight: bold;
 	font-size: 20px;
