@@ -47,13 +47,11 @@ import hidraulic18 from "../../../assets/Hidraulic/hidraulic18.jpg";
 import lining1 from "../../../assets/Lining/lining1.jpeg";
 import lining2 from "../../../assets/Lining/lining2.jpeg";
 import lining3 from "../../../assets/Lining/lining3.jpeg";
-import lining4 from "../../../assets/Lining/lining4.jpeg";
 import lining5 from "../../../assets/Lining/lining5.jpeg";
 import lining6 from "../../../assets/Lining/lining6.jpeg";
 import lining7 from "../../../assets/Lining/lining7.jpeg";
 import lining8 from "../../../assets/Lining/lining8.jpeg";
 import lining9 from "../../../assets/Lining/lining9.jpeg";
-import lining10 from "../../../assets/Lining/lining10.jpg";
 import lining11 from "../../../assets/Lining/lining11.jpg";
 import lining12 from "../../../assets/Lining/lining12.jpg";
 import lining13 from "../../../assets/Lining/lining13.jpg";
@@ -68,7 +66,6 @@ import painting2 from "../../../assets/Painting/painting2.jpeg";
 import painting6 from "../../../assets/Painting/painting6.jpeg";
 import painting7 from "../../../assets/Painting/painting7.jpeg";
 import painting10 from "../../../assets/Painting/painting10.jpeg";
-import painting15 from "../../../assets/Painting/painting15.jpeg";
 import painting16 from "../../../assets/Painting/painting16.jpg";
 import painting17 from "../../../assets/Painting/painting17.jpg";
 import painting18 from "../../../assets/Painting/painting18.jpg";
@@ -93,7 +90,6 @@ const slidesPainting = () => {
     painting6,
     painting7,
     painting10,
-    painting15,
     painting16,
     painting17,
     painting18,
@@ -171,13 +167,11 @@ const slidesLining = () => {
     lining1,
     lining2,
     lining3,
-    lining4,
     lining5,
     lining6,
     lining7,
     lining8,
     lining9,
-    lining10,
     lining11,
     lining12,
     lining13,
