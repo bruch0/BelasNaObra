@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
 import smoothscroll from "smoothscroll-polyfill";
 import {
   slidesEletric,
@@ -27,8 +27,9 @@ import Contact from "./Contact";
 
 function Home({ viewportWidth }) {
   smoothscroll.polyfill();
+  const history = useHistory();
   const { search } = useLocation();
-  if (search.split("=")[1]) window.location.replace(search.split("=")[1]);
+  if (search.split("=")[1]) history.push(search.split("=")[1]);
 
   const slideEletric = slidesEletric();
   const slideCladding = slidesCladding();
