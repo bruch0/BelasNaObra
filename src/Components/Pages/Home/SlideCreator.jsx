@@ -20,9 +20,9 @@ import cladding32 from "../../../assets/Cladding/cladding32.jpeg";
 import cladding33 from "../../../assets/Cladding/cladding33.jpeg";
 import cladding34 from "../../../assets/Cladding/cladding34.jpeg";
 
-import eletric1 from "../../../assets/Eletric/eletric4.jpeg";
-import eletric2 from "../../../assets/Eletric/eletric4.jpeg";
-import eletric3 from "../../../assets/Eletric/eletric4.jpeg";
+import eletric1 from "../../../assets/Eletric/eletric1.jpeg";
+import eletric2 from "../../../assets/Eletric/eletric2.jpeg";
+import eletric3 from "../../../assets/Eletric/eletric3.jpeg";
 import eletric4 from "../../../assets/Eletric/eletric4.jpeg";
 import eletric5 from "../../../assets/Eletric/eletric5.jpeg";
 import eletric6 from "../../../assets/Eletric/eletric6.jpeg";
