@@ -51,7 +51,7 @@ function Home({ viewportWidth }) {
   );
 
   const services = [
-    { icon: reportsLogo, name: "Laudos e vistorias", ref: reportsRef },
+    { icon: reportsLogo, name: "Consultoria e mais", ref: reportsRef },
     {
       icon: projectLogo,
       name: "Projetos",
@@ -125,6 +125,14 @@ function Home({ viewportWidth }) {
           <li>
             <AiOutlineArrowRight /> Visita técnica - Avaliação e medição do
             local
+          </li>
+          <li>
+            <AiOutlineArrowRight /> Acompanhamentos de obra online - controle
+            dos fornecedores e dicas
+          </li>
+          <li>
+            <AiOutlineArrowRight /> Gerenciamento da obra presencial - visitas
+            periodicas e controle da obra geral
           </li>
         </ul>
       </ReportsSection>

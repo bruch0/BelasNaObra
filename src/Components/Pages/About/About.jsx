@@ -21,6 +21,14 @@ function About({ viewportWidth }) {
       text: "A planta elétrica é incrível! As Belas se compromete em manter a empresa apenas com mão de obra feminina!",
     },
     {
+      name: "Fernanda",
+      text: "Nossa experiência com as meninas foi a melhor que poderia ter 👏🏻",
+    },
+    {
+      name: "Reinaldo",
+      text: "Contratei para fazer toda a reforma do meu apartamento e recomendo sem medo! Além das obras realizadas de forma muito organizada e com acompanhamento em tempo real, cuidaram de toda a gestão envolvendo os outros temas, marcenaria, marmoraria, eletrica, hidraulica... sempre com ótimos fornecedores parceiros e com cuidado de dono. Adorei o trabalho",
+    },
+    {
       name: "Kevin",
       text: "A equipe das Belas na obra é muito prestativa, tem muito profissionalismo e seriedade. Agradeço eternamente!",
     },
@@ -38,27 +46,27 @@ function About({ viewportWidth }) {
   const infos = [
     {
       name: "Missão",
-      text: "Proporcionar a integração de mulheres na mão de obra da construção civil, quebrando o tabu existente na sociedade atual.",
+      text: "Proporcionar mão de obra feminina e integração de mulheres na construção civil.",
     },
     {
       name: "Visão",
-      text: "Revelar o valor de mulheres liderando o ambiente da construção civil, proporcionando ao cliente a melhor experiência e realizando sonhos!",
+      text: "Revelar o valor das mulheres dentro da construção civil, proporcionando ao cliente a melhor experiência e realizando sonhos!",
     },
     {
       name: "Valores",
-      text: "As belas possuem um grande diferencial, capaz de transformar espaços em curto prazo, sem negociar o trabalho em unidade da equipe, visando finos acabamentos e detalhes da obra.",
+      text: "A Belas possue um grande diferencial, capaz de realizar uma obra em um prazo curto e de maneira organizada. Nos preocupamos com acabamentos e detalhes da obra.",
     },
   ];
 
   const cardsInfos = [
-    { icon: <RiCompasses2Line />, number: "10+", text: "arquitetos parceiros" },
+    { icon: <RiCompasses2Line />, number: "20+", text: "arquitetos parceiros" },
     {
       icon: <AiOutlineFileDone />,
-      number: "100+",
+      number: "200+",
       text: "projetos desenvolvidos",
     },
-    { icon: <BsHouse />, number: "70+", text: "obras entregues" },
-    { icon: <BiBox />, number: "20+", text: "fornecedores terceiros" },
+    { icon: <BsHouse />, number: "130+", text: "obras entregues" },
+    { icon: <BiBox />, number: "30+", text: "fornecedores terceiros" },
   ];
 
   return (
@@ -77,9 +85,9 @@ function About({ viewportWidth }) {
         </Wrapper>
         <InfoSection>
           <InfoTitle>Por que contratar as Belas?</InfoTitle>
-          Nós Belas prezamos pela realidade, funcionalidade e preço justo.
-          Acreditamos que uma obra é a realização de um sonho e nós temos tudo o
-          que precisa para seu cantinho em um só lugar.
+          Acreditamos que uma obra é uma conquista e nos dedicamos para a
+          realização de sonhos de acordo com seu bolso. Temos tudo o que você
+          precisa para seu apê, em um só lugar!
         </InfoSection>
         <DataSection>
           {cardsInfos.map((card, index) => {

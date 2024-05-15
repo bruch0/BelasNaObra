@@ -12,7 +12,6 @@ import cladding24 from "../../../assets/Cladding/cladding24.jpg";
 import cladding25 from "../../../assets/Cladding/cladding25.jpg";
 import cladding26 from "../../../assets/Cladding/cladding26.jpg";
 import cladding27 from "../../../assets/Cladding/cladding27.jpg";
-import cladding28 from "../../../assets/Cladding/cladding28.jpg";
 import cladding29 from "../../../assets/Cladding/cladding29.jpg";
 import cladding30 from "../../../assets/Cladding/cladding30.jpeg";
 import cladding31 from "../../../assets/Cladding/cladding31.jpeg";
@@ -48,9 +47,6 @@ import hidraulic25 from "../../../assets/Hidraulic/hidraulic25.jpeg";
 import lining1 from "../../../assets/Lining/lining1.jpeg";
 import lining2 from "../../../assets/Lining/lining2.jpeg";
 import lining3 from "../../../assets/Lining/lining3.jpeg";
-import lining9 from "../../../assets/Lining/lining9.jpeg";
-import lining11 from "../../../assets/Lining/lining11.jpg";
-import lining12 from "../../../assets/Lining/lining12.jpg";
 import lining13 from "../../../assets/Lining/lining13.jpg";
 import lining14 from "../../../assets/Lining/lining14.jpg";
 import lining15 from "../../../assets/Lining/lining15.jpg";
@@ -123,7 +119,6 @@ const slidesCladding = () => {
     cladding25,
     cladding26,
     cladding27,
-    cladding28,
     cladding29,
     cladding30,
     cladding31,
@@ -174,9 +169,6 @@ const slidesLining = () => {
     lining1,
     lining2,
     lining3,
-    lining9,
-    lining11,
-    lining12,
     lining13,
     lining14,
     lining15,

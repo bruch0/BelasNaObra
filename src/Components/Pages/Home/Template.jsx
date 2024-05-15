@@ -21,34 +21,42 @@ function Template({ viewportWidth, logo, slides, name }) {
       </Title>
       {name === "Projetos" ? (
         <>
-          <span>Básico</span>
+          <span>O básico inclui:</span>
           <ul>
             <li>
-              <AiOutlineArrowRight /> Planta baixa (demolição e construção,
-              eletrica, hidraulica, gesso, revestimento, pintura)
+              <AiOutlineArrowRight /> Planta baixa
             </li>
             <li>
-              <AiOutlineArrowRight /> Consultoria de cores e decoração
+              <AiOutlineArrowRight /> Elétrica
+            </li>
+            <li>
+              <AiOutlineArrowRight /> Hidráulica
+            </li>
+            <li>
+              <AiOutlineArrowRight /> Revestimento
+            </li>
+            <li>
+              <AiOutlineArrowRight /> Gesso
+            </li>
+            <li>
+              <AiOutlineArrowRight /> Pintura
+            </li>
+            <li>
+              <AiOutlineArrowRight /> Consultoria (referencias)
             </li>
             <li>
               <AiOutlineArrowRight /> Layout dos móveis (posição)
             </li>
-            <li>
-              <AiOutlineArrowRight /> Acompanhamento (acompanhamos os
-              prestadores e fornecedores, entregas)
-            </li>
-            <li>
-              <AiOutlineArrowRight /> Inspirações e referências
-            </li>
           </ul>
-          <span>Já o completo, é tudo do primeiro mais: </span>
+          <span>Já o completo, é tudo do primeiro e mais:</span>
           <ul>
             <li>
-              <AiOutlineArrowRight /> 3D do projeto
+              <AiOutlineArrowRight /> - 3D do projeto (onde você o visualiza
+              melhor) - ⁠cortes , elevações
             </li>
             <li>
-              <AiOutlineArrowRight /> Cortes e detalhes de marcenaria em
-              elevação (para detalhar um móvel , pontos de luz e outros)
+              <AiOutlineArrowRight /> Detalhes de marcenaria (para detalhar um
+              móvel , pontos de luz e outros)
             </li>
           </ul>
         </>
