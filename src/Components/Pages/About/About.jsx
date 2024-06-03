@@ -101,6 +101,16 @@ function About({ viewportWidth }) {
           })}
         </DataSection>
 
+        <LinkGoogleReviewsHolder>
+          <LinkGoogleReviews
+            href="https://g.co/kgs/4VFPkGt"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Veja avaliações no google!
+          </LinkGoogleReviews>
+        </LinkGoogleReviewsHolder>
+
         <InfoTitle>Clientes:</InfoTitle>
         <SlideWrapper>
           <Slide {...fadeProperties}>
@@ -342,6 +352,18 @@ const SlideRatingDiv = styled.div`
   @media (max-width: 350px) {
     font-size: 4vw;
   }
+`;
+
+const LinkGoogleReviewsHolder = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+`;
+
+const LinkGoogleReviews = styled.a`
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
 `;
 
 export default About;

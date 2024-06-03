@@ -2,10 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router";
 import styled from "styled-components";
+import { AiOutlineWhatsApp } from "react-icons/ai";
 import logo from "../assets/logo2.png";
 
 function Header() {
   const history = useHistory();
+
+  const textWhatsApp = encodeURI(
+    "Oi, eu acessei o site de vocês, podem me ajudar?"
+  );
 
   return (
     <PageHeader>
@@ -61,6 +66,13 @@ function Header() {
         />
         <Title>Mão de obra feminina</Title>
       </Container>
+      <LinkWhatsApp2
+        href={`https://wa.me/5511993100778?text=${textWhatsApp}`}
+        target="_blank"
+      >
+        <AiOutlineWhatsApp />
+        <WhatsApp>Entre em contato no Whatsapp</WhatsApp>
+      </LinkWhatsApp2>
     </PageHeader>
   );
 }
@@ -163,6 +175,31 @@ const Title = styled.p`
   @media (max-width: 400px) {
     font-size: 15px;
   }
+`;
+
+const LinkWhatsApp2 = styled.a`
+  display: flex;
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  height: 50px;
+  width: fit-content;
+  align-items: center;
+  padding: 8px;
+  background-color: #25e625;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+
+  svg {
+    height: 35px;
+    width: 35px;
+    fill: white;
+  }
+`;
+
+const WhatsApp = styled.p`
+  color: white;
 `;
 
 export default Header;

@@ -21,10 +21,13 @@ function Template({ viewportWidth, logo, slides, name }) {
       </Title>
       {name === "Projetos" ? (
         <>
-          <span>O básico inclui:</span>
+          <span>Projeto Básico:</span>
           <ul>
             <li>
               <AiOutlineArrowRight /> Planta baixa
+            </li>
+            <li>
+              <AiOutlineArrowRight /> Demolição
             </li>
             <li>
               <AiOutlineArrowRight /> Elétrica
@@ -42,21 +45,22 @@ function Template({ viewportWidth, logo, slides, name }) {
               <AiOutlineArrowRight /> Pintura
             </li>
             <li>
-              <AiOutlineArrowRight /> Consultoria (referencias)
+              <AiOutlineArrowRight /> Layout
             </li>
             <li>
-              <AiOutlineArrowRight /> Layout dos móveis (posição)
+              <AiOutlineArrowRight /> Consultoria
             </li>
           </ul>
-          <span>Já o completo, é tudo do primeiro e mais:</span>
+          <span>Projeto Completo</span>
           <ul>
             <li>
-              <AiOutlineArrowRight /> - 3D do projeto (onde você o visualiza
-              melhor) - ⁠cortes , elevações
+              <AiOutlineArrowRight /> 3D
             </li>
             <li>
-              <AiOutlineArrowRight /> Detalhes de marcenaria (para detalhar um
-              móvel , pontos de luz e outros)
+              <AiOutlineArrowRight /> Cortes e elevações
+            </li>
+            <li>
+              <AiOutlineArrowRight /> Detalhamento de marcenaria
             </li>
           </ul>
         </>

@@ -51,7 +51,7 @@ function Home({ viewportWidth }) {
   );
 
   const services = [
-    { icon: reportsLogo, name: "Consultoria e mais", ref: reportsRef },
+    { icon: reportsLogo, name: "Consultoria", ref: reportsRef },
     {
       icon: projectLogo,
       name: "Projetos",
@@ -117,7 +117,7 @@ function Home({ viewportWidth }) {
         </ReportsTitle>
         <ul>
           <li>
-            <AiOutlineArrowRight /> Checklist - Vistoria nas chaves
+            <AiOutlineArrowRight /> Vistoria nas chaves
           </li>
           <li>
             <AiOutlineArrowRight /> Checklist - Finalização da obra
